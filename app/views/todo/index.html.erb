@@ -1,34 +1,14 @@
 <div id="kermit1">
-                <li>
-                        <input type="checkbox" value="checkbox">
-                        <a href="show/1">Do Honors Chemistry Study Guide </a> <br>
-                        <span class="pomodoro-estimate">4 Pomodoros</span>
+        <ul>
+            <% @todos.each do |todo| %>
+                  <li>
+                   <input type="checkbox" name=""/>
+                   <a href="show/<%= todo.id %>"><%= todo.description %></a>
+                   <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
                     
-                </li>
-                <li>
-                        <input type="checkbox" value="checkbox">
-                        <a href="show/2">Do Ethics Homework that was Due Friday</a> <br>
-                        <span class="pomodoro-estimate"> 3 pomodoros</span> <br>
-                </li>
-                <li>
-                        <input type="checkbox" value="checkbox"> 
-                        <a href="show/3">Email Mr. Dowd about AP Government</a> <br>
-                        <span class="pomodoro-estimate"> 2 pomodoros</span> <br>
-                </li> 
-                <li>
-                        <input type="checkbox" value="checkbox"> 
-                        <a href="show/4"> Remind Briana to Stop Breaking Her Laptop</a> <br>
-                        <span class= "pomodoro-estimate">1 pomodoro </span> 
-                </li> 
-                <li>
-                        <input type="checkbox" value="checkbox">
-                        <a href="show/5">Cry About School</a><br>
-                        <span class="pomodoro-estimate">2 pomodoros</span> 
-                </li> 
-                <li>
-                        <input type="checkbox" value="checkbox">
-                        <a href="show/6"> Pretend You Have No Responsibilities</a><br>
-                        <span class="pomodoro-estimate">1 pomodoro</span> 
+                  </li>
+            <% end %>
+        </ul>
                 </li> 
                    <input type="text" placeholder="add new to do"/> 
                    <input type="number" placeholder="pomodoro estimate"/>
